@@ -1,495 +1,819 @@
+/* 全局样式重置 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* 移除所有元素的外边距 */
+    padding: 0; /* 移除所有元素的内边距 */
+    box-sizing: border-box; /* 使用border-box盒模型，宽高包含内边距和边框 */
 }
 
+/* 页面主体样式 */
 body {
-    font-family: 'Noto Sans SC', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
+    font-family: 'Noto Sans SC', sans-serif; /* 设置字体为思源黑体 */
+    line-height: 1.6; /* 设置行高为1.6倍 */
+    color: #333; /* 设置文字颜色为深灰色 */
+    background-color: #f8f9fa; /* 设置背景色为浅灰色 */
 }
 
+/* 头部导航栏样式 */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    position: fixed; /* 固定定位，始终显示在顶部 */
+    top: 0; /* 距离顶部0像素 */
+    left: 0; /* 距离左侧0像素 */
+    width: 100%; /* 宽度100% */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* 紫色渐变背景 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    z-index: 1000; /* 设置层级为1000，确保在最上层 */
 }
 
+/* 导航栏容器 */
 .navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 1200px; /* 最大宽度1200px */
+    margin: 0 auto; /* 水平居中 */
+    padding: 1rem 2rem; /* 上下1rem，左右2rem内边距 */
+    display: flex; /* 使用flex布局 */
+    justify-content: space-between; /* 两端对齐 */
+    align-items: center; /* 垂直居中 */
 }
 
+/* Logo样式 */
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    font-size: 1.5rem; /* 字体大小1.5rem */
+    font-weight: 700; /* 字重700（粗体） */
+    color: white; /* 文字颜色白色 */
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中 */
+    gap: 0.5rem; /* 元素间距0.5rem */
 }
 
+/* Logo第一个span元素 */
 .logo span:first-child {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* 字体大小1.8rem */
 }
 
+/* 导航链接容器 */
 .nav-links {
-    display: flex;
-    gap: 2rem;
+    display: flex; /* 使用flex布局 */
+    gap: 2rem; /* 链接间距2rem */
 }
 
+/* 导航链接样式 */
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 400;
-    transition: color 0.3s ease;
+    color: white; /* 文字颜色白色 */
+    text-decoration: none; /* 移除下划线 */
+    font-weight: 400; /* 字重400（正常） */
+    transition: color 0.3s ease; /* 颜色变化过渡动画0.3秒 */
 }
 
+/* 导航链接hover状态 */
 .nav-links a:hover {
-    color: #ffd700;
+    color: #ffd700; /* 鼠标悬停时变为金色 */
 }
 
+/* 首页横幅区域 */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    text-align: center;
-    padding: 120px 20px 80px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* 紫色渐变背景 */
+    color: white; /* 文字颜色白色 */
+    text-align: center; /* 文字居中 */
+    padding: 120px 20px 80px; /* 上120px，左右20px，下80px内边距 */
+    min-height: 100vh; /* 最小高度100视口高度 */
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
 }
 
+/* 横幅内容 */
 .hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
+    font-size: 3.5rem; /* 标题字体大小3.5rem */
+    margin-bottom: 1rem; /* 底部外边距1rem */
+    font-weight: 700; /* 字重700（粗体） */
 }
 
+/* 横幅副标题 */
 .hero-content p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    font-size: 1.3rem; /* 字体大小1.3rem */
+    margin-bottom: 2rem; /* 底部外边距2rem */
+    opacity: 0.9; /* 透明度90% */
 }
 
+/* 横幅按钮 */
 .hero-content button {
-    background: white;
-    color: #667eea;
-    border: none;
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    background: white; /* 白色背景 */
+    color: #667eea; /* 紫色文字 */
+    border: none; /* 移除边框 */
+    padding: 15px 40px; /* 上下15px，左右40px内边距 */
+    font-size: 1.1rem; /* 字体大小1.1rem */
+    font-weight: 600; /* 字重600 */
+    border-radius: 50px; /* 圆角50px（胶囊形状） */
+    cursor: pointer; /* 鼠标指针变为手型 */
+    transition: all 0.3s ease; /* 所有属性变化过渡动画0.3秒 */
 }
 
+/* 横幅按钮hover状态 */
 .hero-content button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); /* 向上移动3px */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
 }
 
+/* 书籍展示区域 */
 .books-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
+    max-width: 1200px; /* 最大宽度1200px */
+    margin: 0 auto; /* 水平居中 */
+    padding: 60px 20px; /* 上下60px，左右20px内边距 */
 }
 
+/* 区域标题 */
 .section-header {
-    text-align: center;
-    margin-bottom: 40px;
+    text-align: center; /* 文字居中 */
+    margin-bottom: 40px; /* 底部外边距40px */
 }
 
+/* 区域标题h2 */
 .section-header h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* 字体大小2.5rem */
+    color: #333; /* 深灰色文字 */
+    margin-bottom: 1rem; /* 底部外边距1rem */
 }
 
+/* 区域副标题 */
 .section-header p {
-    color: #666;
-    font-size: 1.1rem;
+    color: #666; /* 灰色文字 */
+    font-size: 1.1rem; /* 字体大小1.1rem */
 }
 
+/* 分类筛选栏 */
+.category-filter {
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 水平居中 */
+    gap: 0.75rem; /* 元素间距0.75rem */
+    margin-bottom: 25px; /* 底部外边距25px */
+    flex-wrap: wrap; /* 换行显示 */
+}
+
+/* 分类按钮 */
+.category-btn {
+    padding: 8px 20px; /* 上下8px，左右20px内边距 */
+    border: 2px solid #e0e0e0; /* 灰色边框 */
+    border-radius: 25px; /* 圆角25px */
+    background: white; /* 白色背景 */
+    color: #666; /* 灰色文字 */
+    font-size: 0.9rem; /* 字体大小0.9rem */
+    font-weight: 500; /* 字重500 */
+    cursor: pointer; /* 鼠标指针变为手型 */
+    transition: all 0.3s ease; /* 所有属性变化过渡动画0.3秒 */
+}
+
+/* 分类按钮hover状态 */
+.category-btn:hover {
+    border-color: var(--category-color, #667eea); /* 边框变为分类颜色 */
+    color: var(--category-color, #667eea); /* 文字变为分类颜色 */
+}
+
+/* 分类按钮激活状态 */
+.category-btn.active {
+    background: var(--category-color, #667eea); /* 背景变为分类颜色 */
+    border-color: var(--category-color, #667eea); /* 边框变为分类颜色 */
+    color: white; /* 白色文字 */
+}
+
+/* 书籍分类标签 */
+.book-category {
+    display: inline-block; /* 行内块元素 */
+    padding: 4px 10px; /* 上下4px，左右10px内边距 */
+    border-radius: 15px; /* 圆角15px */
+    color: white; /* 白色文字 */
+    font-size: 0.75rem; /* 字体大小0.75rem */
+    font-weight: 500; /* 字重500 */
+    margin-bottom: 0.5rem; /* 底部外边距0.5rem */
+}
+
+/* 模态框分类标签 */
+.modal-category {
+    display: inline-block; /* 行内块元素 */
+    padding: 5px 14px; /* 上下5px，左右14px内边距 */
+    border-radius: 18px; /* 圆角18px */
+    color: white; /* 白色文字 */
+    font-size: 0.85rem; /* 字体大小0.85rem */
+    font-weight: 500; /* 字重500 */
+    margin-bottom: 1rem; /* 底部外边距1rem */
+}
+
+/* 筛选栏 */
 .filter-bar {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 水平居中 */
+    gap: 1rem; /* 元素间距1rem */
+    margin-bottom: 40px; /* 底部外边距40px */
+    flex-wrap: wrap; /* 换行显示 */
 }
 
+/* 筛选栏输入框和选择框 */
 .filter-bar input,
 .filter-bar select {
-    padding: 12px 20px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: border-color 0.3s ease;
+    padding: 12px 20px; /* 上下12px，左右20px内边距 */
+    border: 2px solid #e0e0e0; /* 灰色边框 */
+    border-radius: 8px; /* 圆角8px */
+    font-size: 1rem; /* 字体大小1rem */
+    font-family: inherit; /* 继承父元素字体 */
+    transition: border-color 0.3s ease; /* 边框颜色过渡动画0.3秒 */
 }
 
+/* 筛选栏输入框和选择框聚焦状态 */
 .filter-bar input:focus,
 .filter-bar select:focus {
-    outline: none;
-    border-color: #667eea;
+    outline: none; /* 移除默认聚焦边框 */
+    border-color: #667eea; /* 边框变为紫色 */
 }
 
+/* 筛选栏输入框 */
 .filter-bar input {
-    min-width: 250px;
+    min-width: 250px; /* 最小宽度250px */
 }
 
+/* 书籍网格容器 */
 .books-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
+    display: grid; /* 使用grid布局 */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* 自动填充，最小宽度220px */
+    gap: 1.5rem; /* 网格间距1.5rem */
 }
 
+/* 书籍卡片 */
 .book-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    background: white; /* 白色背景 */
+    border-radius: 12px; /* 圆角12px */
+    overflow: hidden; /* 隐藏溢出内容 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* 添加阴影 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 过渡动画 */
+    cursor: pointer; /* 鼠标指针变为手型 */
+    padding: 1.5rem; /* 内边距1.5rem */
+    text-align: center; /* 文字居中 */
 }
 
+/* 书籍卡片hover状态 */
 .book-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px); /* 向上移动3px */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* 加深阴影 */
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%); /* 浅紫色背景 */
 }
 
-.book-cover {
-    width: 100%;
-    height: 350px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
-}
-
-.book-cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
+/* 书籍信息区域 */
 .book-info {
-    padding: 1.5rem;
+    display: flex; /* 使用flex布局 */
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平居中 */
+    gap: 0.75rem; /* 元素间距0.75rem */
 }
 
+/* 点击提示 */
+.click-hint {
+    font-size: 0.85rem; /* 字体大小0.85rem */
+    color: #999; /* 浅灰色文字 */
+    margin-top: 0.5rem; /* 顶部外边距0.5rem */
+}
+
+/* 书籍标题 */
 .book-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 0.5rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 1rem; /* 字体大小1rem */
+    font-weight: 600; /* 字重600 */
+    color: #333; /* 深灰色文字 */
+    margin-bottom: 0.5rem; /* 底部外边距0.5rem */
+    white-space: normal; /* 允许换行 */
+    word-break: break-word; /* 单词过长时强制换行 */
+    line-height: 1.5; /* 行高1.5倍 */
 }
 
+/* 书籍作者（预留） */
 .book-author {
-    color: #666;
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
+    color: #666; /* 灰色文字 */
+    font-size: 0.95rem; /* 字体大小0.95rem */
+    margin-bottom: 1rem; /* 底部外边距1rem */
 }
 
+/* 书籍价格区域 */
 .book-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* 使用flex布局 */
+    justify-content: space-between; /* 两端对齐 */
+    align-items: center; /* 垂直居中 */
 }
 
+/* 价格 */
 .price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #e74c3c;
+    font-size: 1.5rem; /* 字体大小1.5rem */
+    font-weight: 700; /* 字重700（粗体） */
+    color: #e74c3c; /* 红色文字 */
 }
 
+/* 原价（预留） */
 .original-price {
-    font-size: 0.9rem;
-    color: #999;
-    text-decoration: line-through;
-    margin-left: 0.5rem;
+    font-size: 0.9rem; /* 字体大小0.9rem */
+    color: #999; /* 浅灰色文字 */
+    text-decoration: line-through; /* 删除线 */
+    margin-left: 0.5rem; /* 左侧外边距0.5rem */
 }
 
+/* 成色标签（预留） */
 .book-condition {
-    padding: 4px 12px;
-    background: #e8f5e9;
-    color: #2e7d32;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    padding: 4px 12px; /* 上下4px，左右12px内边距 */
+    background: #e8f5e9; /* 浅绿色背景 */
+    color: #2e7d32; /* 深绿色文字 */
+    border-radius: 20px; /* 圆角20px */
+    font-size: 0.85rem; /* 字体大小0.85rem */
 }
 
+/* 无结果提示 */
 .no-results {
-    text-align: center;
-    padding: 4rem;
-    color: #666;
+    text-align: center; /* 文字居中 */
+    padding: 4rem; /* 内边距4rem */
+    color: #666; /* 灰色文字 */
 }
 
+/* 关于我们区域 */
 .about-section {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
-    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%); /* 浅灰色渐变背景 */
+    padding: 60px 20px; /* 上下60px，左右20px内边距 */
 }
 
+/* 关于我们内容 */
 .about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+    max-width: 800px; /* 最大宽度800px */
+    margin: 0 auto; /* 水平居中 */
+    text-align: center; /* 文字居中 */
 }
 
+/* 关于我们标题 */
 .about-content h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1.5rem;
+    font-size: 2.5rem; /* 字体大小2.5rem */
+    color: #333; /* 深灰色文字 */
+    margin-bottom: 1.5rem; /* 底部外边距1.5rem */
 }
 
+/* 关于我们描述 */
 .about-content p {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 2rem;
+    font-size: 1.1rem; /* 字体大小1.1rem */
+    color: #666; /* 灰色文字 */
+    line-height: 1.8; /* 行高1.8倍 */
+    margin-bottom: 2rem; /* 底部外边距2rem */
 }
 
+/* 统计数据容器 */
 .stats {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 水平居中 */
+    gap: 3rem; /* 元素间距3rem */
+    flex-wrap: wrap; /* 换行显示 */
 }
 
+/* 统计数据项 */
 .stat-item {
-    text-align: center;
+    text-align: center; /* 文字居中 */
 }
 
+/* 统计数字 */
 .stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #667eea;
+    display: block; /* 块级元素 */
+    font-size: 2.5rem; /* 字体大小2.5rem */
+    font-weight: 700; /* 字重700（粗体） */
+    color: #667eea; /* 紫色文字 */
 }
 
+/* 统计标签 */
 .stat-label {
-    display: block;
-    color: #666;
-    font-size: 0.95rem;
+    display: block; /* 块级元素 */
+    color: #666; /* 灰色文字 */
+    font-size: 0.95rem; /* 字体大小0.95rem */
 }
 
+/* 联系方式区域 */
 .contact-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    text-align: center;
+    max-width: 800px; /* 最大宽度800px */
+    margin: 0 auto; /* 水平居中 */
+    padding: 60px 20px; /* 上下60px，左右20px内边距 */
+    text-align: center; /* 文字居中 */
 }
 
+/* 联系方式标题 */
 .contact-content h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* 字体大小2.5rem */
+    color: #333; /* 深灰色文字 */
+    margin-bottom: 1rem; /* 底部外边距1rem */
 }
 
+/* 联系方式描述 */
 .contact-content p {
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    color: #666; /* 灰色文字 */
+    font-size: 1.1rem; /* 字体大小1.1rem */
+    margin-bottom: 2rem; /* 底部外边距2rem */
 }
 
+/* 联系方式容器 */
 .contact-methods {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 水平居中 */
+    gap: 2rem; /* 元素间距2rem */
+    flex-wrap: wrap; /* 换行显示 */
 }
 
+/* 联系方式项 */
 .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: white;
-    padding: 1.5rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    min-width: 250px;
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中 */
+    gap: 1rem; /* 元素间距1rem */
+    background: white; /* 白色背景 */
+    padding: 1.5rem 2rem; /* 上下1.5rem，左右2rem内边距 */
+    border-radius: 12px; /* 圆角12px */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* 添加阴影 */
+    min-width: 250px; /* 最小宽度250px */
 }
 
+/* 联系图标 */
 .contact-icon {
-    font-size: 2rem;
+    font-size: 2rem; /* 字体大小2rem */
 }
 
+/* 联系标签 */
 .contact-label {
-    display: block;
-    font-size: 0.9rem;
-    color: #999;
+    display: block; /* 块级元素 */
+    font-size: 0.9rem; /* 字体大小0.9rem */
+    color: #999; /* 浅灰色文字 */
 }
 
+/* 联系值 */
 .contact-value {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
+    display: block; /* 块级元素 */
+    font-size: 1.1rem; /* 字体大小1.1rem */
+    font-weight: 600; /* 字重600 */
+    color: #333; /* 深灰色文字 */
 }
 
+/* 页脚 */
 footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 40px;
+    background: #333; /* 深灰色背景 */
+    color: white; /* 白色文字 */
+    text-align: center; /* 文字居中 */
+    padding: 2rem; /* 内边距2rem */
+    margin-top: 40px; /* 顶部外边距40px */
 }
 
+/* 模态框 */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定定位 */
+    z-index: 2000; /* 层级2000 */
+    left: 0; /* 距离左侧0像素 */
+    top: 0; /* 距离顶部0像素 */
+    width: 100%; /* 宽度100% */
+    height: 100%; /* 高度100% */
+    overflow: auto; /* 可滚动 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
 }
 
+/* 模态框内容 */
 .modal-content {
-    background-color: white;
-    margin: 10% auto;
-    padding: 2rem;
-    border-radius: 16px;
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-    animation: modalSlideIn 0.3s ease;
+    background-color: white; /* 白色背景 */
+    margin: 10% auto; /* 距离顶部10%，水平居中 */
+    padding: 2rem; /* 内边距2rem */
+    border-radius: 16px; /* 圆角16px */
+    width: 90%; /* 宽度90% */
+    max-width: 600px; /* 最大宽度600px */
+    position: relative; /* 相对定位 */
+    animation: modalSlideIn 0.3s ease; /* 入场动画 */
 }
 
+/* 模态框入场动画 */
 @keyframes modalSlideIn {
     from {
-        opacity: 0;
-        transform: translateY(-20px);
+        opacity: 0; /* 初始透明度0 */
+        transform: translateY(-20px); /* 初始向上偏移20px */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* 最终透明度1 */
+        transform: translateY(0); /* 最终位置 */
     }
 }
 
+/* 关闭按钮 */
 .close-modal {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    color: #aaa; /* 浅灰色 */
+    float: right; /* 右浮动 */
+    font-size: 28px; /* 字体大小28px */
+    font-weight: bold; /* 粗体 */
+    cursor: pointer; /* 鼠标指针变为手型 */
+    transition: color 0.3s ease; /* 颜色过渡动画 */
 }
 
+/* 关闭按钮hover状态 */
 .close-modal:hover {
-    color: #333;
+    color: #333; /* 深灰色 */
 }
 
+/* 模态框主体内容 */
 .modal-body {
-    display: flex;
-    gap: 2rem;
+    display: flex; /* 使用flex布局 */
+    gap: 2rem; /* 元素间距2rem */
 }
 
+/* 模态框封面 */
 .modal-cover {
-    width: 200px;
-    height: 280px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
-    overflow: hidden;
+    width: 200px; /* 宽度200px */
+    height: 280px; /* 高度280px */
+    border-radius: 8px; /* 圆角8px */
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%); /* 浅灰色渐变背景 */
+    overflow: hidden; /* 隐藏溢出 */
 }
 
+/* 模态框封面图片 */
 .modal-cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* 宽度100% */
+    height: 100%; /* 高度100% */
+    object-fit: cover; /* 覆盖填充 */
 }
 
+/* 模态框详情 */
 .modal-details {
-    flex: 1;
+    flex: 1; /* 占据剩余空间 */
 }
 
+/* 模态框标题 */
 .modal-details h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem; /* 字体大小1.5rem */
+    margin-bottom: 0.5rem; /* 底部外边距0.5rem */
 }
 
+/* 模态框描述（预留） */
 .modal-details p {
-    color: #666;
-    margin-bottom: 1rem;
+    color: #666; /* 灰色文字 */
+    margin-bottom: 1rem; /* 底部外边距1rem */
 }
 
+/* 模态框价格 */
 .modal-price {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #e74c3c;
-    margin-bottom: 0.5rem;
+    font-size: 2rem; /* 字体大小2rem */
+    font-weight: 700; /* 字重700（粗体） */
+    color: #e74c3c; /* 红色文字 */
+    margin-bottom: 0.5rem; /* 底部外边距0.5rem */
 }
 
+/* 模态框原价（预留） */
 .modal-original-price {
-    font-size: 1rem;
-    color: #999;
-    text-decoration: line-through;
+    font-size: 1rem; /* 字体大小1rem */
+    color: #999; /* 浅灰色文字 */
+    text-decoration: line-through; /* 删除线 */
 }
 
+/* 模态框成色标签（预留） */
 .modal-condition {
-    display: inline-block;
-    padding: 6px 16px;
-    background: #e8f5e9;
-    color: #2e7d32;
-    border-radius: 20px;
-    margin: 1rem 0;
+    display: inline-block; /* 行内块元素 */
+    padding: 6px 16px; /* 上下6px，左右16px内边距 */
+    background: #e8f5e9; /* 浅绿色背景 */
+    color: #2e7d32; /* 深绿色文字 */
+    border-radius: 20px; /* 圆角20px */
+    margin: 1rem 0; /* 上下外边距1rem */
 }
 
+/* 模态框描述（预留） */
 .modal-description {
-    color: #666;
-    line-height: 1.6;
+    color: #666; /* 灰色文字 */
+    line-height: 1.6; /* 行高1.6倍 */
 }
 
+/* 响应式设计 - 屏幕宽度小于1024px时（平板） */
+@media (max-width: 1024px) {
+    /* 书籍网格容器 */
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 调整卡片宽度 */
+        gap: 1.25rem; /* 调整间距 */
+    }
+
+    /* 书籍标题 */
+    .book-title {
+        font-size: 0.95rem; /* 字体大小调整为0.95rem */
+    }
+}
+
+/* 响应式设计 - 屏幕宽度小于768px时（手机横屏） */
 @media (max-width: 768px) {
+    /* 横幅标题 */
     .hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 2rem; /* 字体大小调整为2rem */
     }
 
+    /* 横幅副标题 */
     .hero-content p {
-        font-size: 1.1rem;
+        font-size: 1rem; /* 字体大小调整为1rem */
     }
 
+    /* 导航链接 */
     .nav-links {
-        gap: 1rem;
+        gap: 0.75rem; /* 间距调整为0.75rem */
     }
 
+    /* 导航链接文字 */
+    .nav-links a {
+        font-size: 0.9rem; /* 字体大小调整为0.9rem */
+    }
+
+    /* Logo */
+    .logo {
+        font-size: 1.2rem; /* 字体大小调整为1.2rem */
+    }
+
+    /* 书籍网格容器 */
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* 调整卡片宽度 */
+        gap: 1rem; /* 调整间距 */
+        padding: 0 10px; /* 添加左右内边距 */
+    }
+
+    /* 书籍卡片 */
+    .book-card {
+        padding: 1rem; /* 内边距调整为1rem */
+    }
+
+    /* 书籍标题 */
+    .book-title {
+        font-size: 0.85rem; /* 字体大小调整为0.85rem */
+        line-height: 1.4; /* 行高调整为1.4倍 */
+    }
+
+    /* 价格 */
+    .price {
+        font-size: 1.3rem; /* 字体大小调整为1.3rem */
+    }
+
+    /* 点击提示 */
+    .click-hint {
+        font-size: 0.75rem; /* 字体大小调整为0.75rem */
+    }
+
+    /* 模态框内容 */
+    .modal-content {
+        margin: 5% auto; /* 距离顶部5% */
+        width: 95%; /* 宽度95% */
+        padding: 1.5rem; /* 内边距调整为1.5rem */
+    }
+
+    /* 模态框主体 */
     .modal-body {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* 垂直布局 */
+        align-items: center; /* 水平居中 */
+        gap: 1.5rem; /* 间距调整为1.5rem */
     }
 
+    /* 模态框封面 */
     .modal-cover {
-        width: 100%;
-        max-width: 250px;
+        width: 100%; /* 宽度100% */
+        max-width: 250px; /* 最大宽度250px */
+        height: auto; /* 高度自适应 */
+        aspect-ratio: 3/4; /* 保持3:4比例 */
     }
 
+    /* 模态框详情 */
+    .modal-details {
+        text-align: center; /* 文字居中 */
+    }
+
+    /* 模态框标题 */
+    .modal-details h3 {
+        font-size: 1.3rem; /* 字体大小调整为1.3rem */
+    }
+
+    /* 筛选栏 */
     .filter-bar {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* 垂直布局 */
+        align-items: center; /* 水平居中 */
+        gap: 0.75rem; /* 间距调整为0.75rem */
     }
 
+    /* 筛选栏输入框 */
     .filter-bar input {
-        min-width: 100%;
-        max-width: 300px;
+        min-width: 100%; /* 最小宽度100% */
+        max-width: 100%; /* 最大宽度100% */
+        width: 100%; /* 宽度100% */
     }
 
+    /* 筛选栏选择框 */
+    .filter-bar select {
+        width: 100%; /* 宽度100% */
+        max-width: 300px; /* 最大宽度300px */
+    }
+
+    /* 统计数据 */
     .stats {
-        gap: 1.5rem;
+        gap: 1rem; /* 间距调整为1rem */
     }
 
+    /* 联系方式 */
     .contact-methods {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* 垂直布局 */
+        align-items: center; /* 水平居中 */
+        gap: 1rem; /* 间距调整为1rem */
+    }
+
+    /* 联系方式项 */
+    .contact-item {
+        min-width: 100%; /* 最小宽度100% */
+        max-width: 300px; /* 最大宽度300px */
+    }
+
+    /* 区域标题h2 */
+    .section-header h2,
+    .about-content h2,
+    .contact-content h2 {
+        font-size: 1.8rem; /* 字体大小调整为1.8rem */
+    }
+
+    /* 页脚 */
+    footer {
+        padding: 1.5rem; /* 内边距调整为1.5rem */
+        font-size: 0.9rem; /* 字体大小调整为0.9rem */
+    }
+}
+
+/* 响应式设计 - 屏幕宽度小于480px时（手机竖屏） */
+@media (max-width: 480px) {
+    /* 横幅 */
+    .hero {
+        padding: 100px 15px 60px; /* 调整内边距 */
+    }
+
+    /* 横幅标题 */
+    .hero-content h1 {
+        font-size: 1.6rem; /* 字体大小调整为1.6rem */
+    }
+
+    /* 横幅副标题 */
+    .hero-content p {
+        font-size: 0.9rem; /* 字体大小调整为0.9rem */
+    }
+
+    /* 横幅按钮 */
+    .hero-content button {
+        padding: 12px 30px; /* 内边距调整为上下12px，左右30px */
+        font-size: 1rem; /* 字体大小调整为1rem */
+    }
+
+    /* 导航栏 */
+    .navbar {
+        padding: 0.75rem 1rem; /* 内边距调整为上下0.75rem，左右1rem */
+    }
+
+    /* 导航链接 */
+    .nav-links {
+        gap: 0.5rem; /* 间距调整为0.5rem */
+    }
+
+    /* 导航链接文字 */
+    .nav-links a {
+        font-size: 0.8rem; /* 字体大小调整为0.8rem */
+    }
+
+    /* Logo */
+    .logo {
+        font-size: 1.1rem; /* 字体大小调整为1.1rem */
+    }
+
+    /* 书籍网格容器 */
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* 调整卡片宽度 */
+        gap: 0.75rem; /* 调整间距 */
+    }
+
+    /* 书籍卡片 */
+    .book-card {
+        padding: 0.75rem; /* 内边距调整为0.75rem */
+    }
+
+    /* 书籍标题 */
+    .book-title {
+        font-size: 0.8rem; /* 字体大小调整为0.8rem */
+        line-height: 1.4; /* 行高调整为1.4倍 */
+    }
+
+    /* 价格 */
+    .price {
+        font-size: 1.2rem; /* 字体大小调整为1.2rem */
+    }
+
+    /* 模态框内容 */
+    .modal-content {
+        margin: 3% auto; /* 距离顶部3% */
+        width: 98%; /* 宽度98% */
+        padding: 1rem; /* 内边距调整为1rem */
+    }
+
+    /* 区域标题 */
+    .section-header {
+        margin-bottom: 25px; /* 底部外边距调整为25px */
+    }
+
+    /* 区域标题h2 */
+    .section-header h2,
+    .about-content h2,
+    .contact-content h2 {
+        font-size: 1.5rem; /* 字体大小调整为1.5rem */
+    }
+
+    /* 区域副标题 */
+    .section-header p,
+    .contact-content p {
+        font-size: 0.9rem; /* 字体大小调整为0.9rem */
     }
 }
