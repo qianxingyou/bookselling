@@ -3,13 +3,13 @@ const booksData = [
         id: 1,
         title: "python数据挖掘算法与应用",
         price: 3,
-        image: "pictures/C7364A5CA98E3A39127BF6E91B347A21.jpg"
+        image: "C7364A5CA98E3A39127BF6E91B347A21.jpg"
     },
     {
         id: 2,
         title: "数据结构习题与实验指导",
         price: 2,
-        image: "pictures/57761EE71050D6152BCF60CE1DB4928E.jpg"
+        image: "57761EE71050D6152BCF60CE1DB4928E.jpg"
     }
 ];
 
