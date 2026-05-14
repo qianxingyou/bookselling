@@ -1,26 +1,213 @@
 const categories = [
+    { id: "all", name: "全部", color: "#666" },
     { id: "math", name: "数学类", color: "#e74c3c" },
     { id: "english", name: "英语类", color: "#2ecc71" },
     { id: "computer", name: "计算机类", color: "#3498db" },
+    { id: "politics", name: "思政类", color: "#e67e22" },
     { id: "misc", name: "杂物类", color: "#9b59b6" }
 ];
 
 const booksData = [
+    // 数学类
     {
-        title: "python数据挖掘算法与应用",
-        price: 2,
-        image: "python数据挖掘算法与应用.jpg",
+        title: "大学生数学竞赛教程",
+        price: 5,
+        image: "大学生数学竞赛教程.jpg",
+        category: "math"
+    },
+    {
+        title: "姜晓千150",
+        price: 5,
+        image: "姜晓千150.jpg",
+        category: "math"
+    },
+    {
+        title: "离散数学",
+        price: 3,
+        image: "离散数学.jpg",
+        category: "math"
+    },
+    {
+        title: "高数第七版下册",
+        price: 3,
+        image: "高数第七版下册.jpg",
+        category: "math"
+    },
+    {
+        title: "高数（上）辅导书",
+        price: 3,
+        image: "高数（上）辅导书.jpg",
+        category: "math"
+    },
+    {
+        title: "高数（下）辅导书",
+        price: 3,
+        image: "高数（下）辅导书.jpg",
+        category: "math"
+    },
+    {
+        title: "大雪深埋",
+        price: 5,
+        image: "大雪深埋.jpg",
+        category: "math"
+    },
+    {
+        title: "26考研数学临门一脚",
+        price: 3,
+        image: "26考研数学临门一脚.jpg",
+        category: "math"
+    },
+    {
+        title: "数学建模",
+        price: 3,
+        image: "数学建模.jpg",
+        category: "math"
+    },
+    {
+        title: "概率论与数理统计",
+        price: 3,
+        image: "概率论与数理统计.jpg",
+        category: "math"
+    },
+    {
+        title: "线性代数与空间解析几何（第五版）",
+        price: 3,
+        image: "线性代数与空间解析几何（第五版）.jpg",
+        category: "math"
+    },
+    {
+        title: "线性代数与空间解析几何（第四版）学习指导教程",
+        price: 3,
+        image: "线性代数与空间解析几何（第四版）学习指导教程.jpg",
+        category: "math"
+    },
+    
+    // 英语类
+    {
+        title: "红宝书",
+        price: 5,
+        image: "红宝书.jpg",
+        category: "english"
+    },
+    {
+        title: "考研英语阅读的逻辑",
+        price: 3,
+        image: "考研英语阅读的逻辑.jpg",
+        category: "english"
+    },
+    
+    // 计算机类
+    {
+        title: "26竟成408模拟卷",
+        price: 3,
+        image: "26竟成408模拟卷.jpg",
         category: "computer"
     },
     {
-        title: "数据结构习题与实验指导",
-        price: 2,
-        image: "数据结构习题与实验指导.jpg",
+        title: "26考研王道408四本",
+        price: 8,
+        image: "26考研王道408四本.jpg",
+        category: "computer"
+    },
+    {
+        title: "SpringBoot实战",
+        price: 3,
+        image: "SpringBoot实战.jpg",
+        category: "computer"
+    },
+    {
+        title: "python从入门到实践",
+        price: 3,
+        image: "python从入门到实践.jpg",
+        category: "computer"
+    },
+    {
+        title: "vue.js从入门到项目实战",
+        price: 3,
+        image: "vue.js从入门到项目实战.jpg",
+        category: "computer"
+    },
+    {
+        title: "云计算技术与应用",
+        price: 3,
+        image: "云计算技术与应用.jpg",
+        category: "computer"
+    },
+    {
+        title: "数据库原理及应用",
+        price: 3,
+        image: "数据库原理及应用.jpg",
+        category: "computer"
+    },
+    {
+        title: "数据库原理及应用实验与课程设计指导",
+        price: 3,
+        image: "数据库原理及应用实验与课程设计指导.jpg",
+        category: "computer"
+    },
+    {
+        title: "数据结构与算法分析",
+        price: 3,
+        image: "数据结构与算法分析.jpg",
+        category: "computer"
+    },
+    {
+        title: "数据结构（C++版）",
+        price: 5,
+        image: "数据结构（C++版）.jpg",
+        category: "computer"
+    },
+    {
+        title: "数据结构（C语言版）",
+        price: 5,
+        image: "数据结构（C语言版）.jpg",
+        category: "computer"
+    },
+    {
+        title: "机器学习",
+        price: 3,
+        image: "机器学习.jpg",
+        category: "computer"
+    },
+    {
+        title: "深入浅出计算机网络",
+        price: 5,
+        image: "深入浅出计算机网络.jpg",
+        category: "computer"
+    },
+    {
+        title: "深入理解SpringCloud",
+        price: 3,
+        image: "深入理解SpringCloud.jpg",
+        category: "computer"
+    },
+    {
+        title: "算法竞赛",
+        price: 3,
+        image: "算法竞赛.jpg",
+        category: "computer"
+    },
+    {
+        title: "计算机操作系统",
+        price: 5,
+        image: "计算机操作系统.jpg",
+        category: "computer"
+    },
+    {
+        title: "计算机网络",
+        price: 5,
+        image: "计算机网络.jpg",
+        category: "computer"
+    },
+    {
+        title: "Python语言程序设计",
+        price: 3,
+        image: "Python语言程序设计.jpg",
         category: "computer"
     },
     {
         title: "2025计算机408历年真题解析",
-        price: 2,
+        price: 3,
         image: "2025计算机408历年真题解析.jpg",
         category: "computer"
     },
@@ -32,7 +219,7 @@ const booksData = [
     },
     {
         title: "26王道408综合题做题本（数据结构）",
-        price: 2,
+        price: 3,
         image: "26王道408综合题做题本（数据结构）.jpg",
         category: "computer"
     },
@@ -61,12 +248,6 @@ const booksData = [
         category: "computer"
     },
     {
-        title: "26考研数学临门一脚",
-        price: 3,
-        image: "26考研数学临门一脚.jpg",
-        category: "math"
-    },
-    {
         title: "C++程序设计工程化实验教程",
         price: 3,
         image: "C++程序设计工程化实验教程.jpg",
@@ -79,6 +260,12 @@ const booksData = [
         category: "computer"
     },
     {
+        title: "python数据挖掘算法与应用",
+        price: 3,
+        image: "python数据挖掘算法与应用.jpg",
+        category: "computer"
+    },
+    {
         title: "Spark大数据分析技术",
         price: 3,
         image: "Spark大数据分析技术.jpg",
@@ -86,8 +273,7 @@ const booksData = [
     },
     {
         title: "云计算导论",
-        price: 2,
-        image: "云计算导论.jpg",
+        price: 3,
         image: "云计算导论.jpg",
         category: "computer"
     },
@@ -98,47 +284,46 @@ const booksData = [
         category: "computer"
     },
     {
-        title: "数学建模",
+        title: "数据结构习题与实验指导",
         price: 3,
-        image: "数学建模.jpg",
-        category: "math"
-    },
-    {
-        title: "概率论与数理统计",
-        price: 3,
-        image: "概率论与数理统计.jpg",
-        category: "math"
-    },
-    {
-        title: "红宝书",
-        price: 5,
-        image: "红宝书.jpg",
-        category: "english"
-    },
-    {
-        title: "线性代数与空间解析几何（第五版）",
-        price: 3,
-        image: "线性代数与空间解析几何（第五版）.jpg",
-        category: "math"
-    },
-    {
-        title: "线性代数与空间解析几何（第四版）学习指导教程",
-        price: 3,
-        image: "线性代数与空间解析几何（第四版）学习指导教程.jpg",
-        category: "math"
-    },
-    {
-        title: "考研英语阅读的逻辑",
-        price: 3,
-        image: "考研英语阅读的逻辑.jpg",
-        category: "english"
+        image: "数据结构习题与实验指导.jpg",
+        category: "computer"
     },
     {
         title: "计算机组成原理",
-        price: 2,
+        price: 3,
         image: "计算机组成原理.jpg",
         category: "computer"
-    }
+    },
+    
+    // 思政类
+    {
+        title: "习近平新时代中国特色社会主义思想概论",
+        price: 3,
+        image: "习近平新时代中国特色社会主义思想概论.jpg",
+        category: "politics"
+    },
+    {
+        title: "思想道德与法治",
+        price: 3,
+        image: "思想道德与法治.jpg",
+        category: "politics"
+    },
+    {
+        title: "毛泽东思想和中国特色社会主义理论体系概论",
+        price: 3,
+        image: "毛泽东思想和中国特色社会主义理论体系概论.jpg",
+        category: "politics"
+    },
+    {
+        title: "马克思主义基本原理",
+        price: 3,
+        image: "马克思主义基本原理.jpg",
+        category: "politics"
+    },
+    
+    // 杂物类
+    
 ];
 
 function initBooks() {
